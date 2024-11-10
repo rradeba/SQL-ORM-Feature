@@ -1,7 +1,5 @@
+
 from flask import jsonify, request
-from Models.order import Order
-from Models.order import Order
-from Models.order import Order
 from Models.order import Order
 from extensions import db
 
@@ -17,7 +15,7 @@ def save_order():
     db.session.commit()
     return jsonify({"message": "Order saved"}), 201
 
-def get_orders():
+def get_order():
  
     page = request.args.get('page', 1, type=int)
     per_page = request.args.get('per_page', 10, type=int)

@@ -13,7 +13,7 @@ def save_product():
     db.session.commit()
     return jsonify({"message": "Product saved"}), 201
 
-def get_products():
+def get_product():
     
     page = request.args.get('page', 1, type=int)
     per_page = request.args.get('per_page', 10, type=int)

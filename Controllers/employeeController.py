@@ -2,6 +2,7 @@ from flask import jsonify, request
 from Models.employee import Employee
 from extensions import db
 
+
 def save_employee():
     data = request.get_json()
     new_employee = Employee(
